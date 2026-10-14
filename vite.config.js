@@ -34,8 +34,8 @@ export default defineConfig(({ mode }) => {
       },
     },
     plugins: [vue(), tailwindcss(), preloadCssPlugin()],
-    server: { port: Number(env.APP_PORT) || 5173 },
-    preview: { port: Number(env.APP_PORT) || 5173 },
+    server: { port: Number(env.APP_PORT) || 5173, host: true, cors: true },
+    preview: { port: Number(env.APP_PORT) || 5173, host: true, cors: true },
     define: {
       DELCOM_BASEURL: JSON.stringify(baseUrl),
     },
