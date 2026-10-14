@@ -16,8 +16,8 @@ export const routes = [
     component: AuthLayout,
     meta: { guest: true },
     children: [
-      { path: 'login', component: LoginPage },
-      { path: 'register', component: RegisterPage },
+      { path: 'login', component: LoginPage, alias: ['/login'] },
+      { path: 'register', component: RegisterPage, alias: ['/register'] },
     ],
   },
   {
